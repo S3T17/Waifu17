@@ -1,0 +1,98 @@
+body{
+  font-family: "Comic Sans MS";
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 15s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.social-media {
+  text-align: justify;
+  opacity: 0;
+  background: lightyellow;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20em;
+  padding: 1em 1em 2em;
+  transition: .5s;
+  z-index: 2;
+}
+
+.social-media:hover {
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.background {
+  opacity: 0.9;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 118.5%;
+}
+
+.foreground {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 118.5%;
+  z-index: 1;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56%; /* 16:9 */
+  padding-top: 25px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1055px){
+  .video-wrapper iframe {
+    display: none;
+  }
+}
